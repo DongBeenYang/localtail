@@ -1,0 +1,140 @@
+body {
+	max-width: 1500px;
+	margin: auto;
+}
+
+/*네이게이션 바*/
+.navbar {
+	height: 10vh;
+	display: flex;
+	padding: 2em 0em 1em 0em;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	width: 150px;
+	align-items: center;
+	font-size: 0.8em;
+	letter-spacing: 0.3em;
+	line-height: 1em;
+}
+.menu p:hover {
+	background-color: rgb(33, 204, 187);
+}
+
+.menu p {
+	margin: 0.5em;
+}
+
+.visitcon {
+	width: 80px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+}
+.visitcon i:hover {
+	color: rgb(33, 204, 187);
+}
+.visitcon p:hover {
+	color: rgb(33, 204, 187);
+}
+
+@media (max-width: 850px) {
+	.navbar {
+		height: 25vh;
+		display: flex;
+		padding: 1em;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.logo {
+		display: flex;
+		align-items: center;
+		font-size: 3em;
+		color: rgb(25, 25, 25);
+	}
+
+	.menu {
+		height: 30%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 2em 0em 1em 0em;
+		font-size: 0.8em;
+		letter-spacing: 0.3em;
+		line-height: 1em;
+	}
+
+	.visitcon {
+		width: 60px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 0.8em;
+		letter-spacing: 0.1em;
+	}
+}
+/* 이미지 FlexBox */
+
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	height: 40vh;
+	flex-grow: 1;
+}
+
+li:last-child {
+	flex-grow: 10;
+}
+
+img {
+	max-height: 100%;
+	min-width: 100%;
+	object-fit: cover;
+	vertical-align: bottom;
+}
+
+@media (max-aspect-ratio: 1/1) {
+	li {
+		height: 30vh;
+	}
+}
+
+@media (max-height: 480px) {
+	li {
+		height: 80vh;
+	}
+}
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+	ul {
+		flex-direction: row;
+	}
+
+	li {
+		height: auto;
+		width: 100%;
+	}
+	img {
+		width: 100%;
+		max-height: 75vh;
+		min-width: 0;
+	}
+}
